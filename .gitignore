@@ -1,0 +1,33 @@
+# Game files (copyrighted / not distributed here)
+Among Us.exe
+Among Us_Data/
+GameAssembly.dll
+UnityPlayer.dll
+UnityCrashHandler32.exe
+baselib.dll
+msvcp140.dll
+vcruntime140.dll
+steam_appid.txt
+winhttp.dll
+
+# Local/runtime files not distributed in this repository
+BepInEx/
+dotnet/
+runtimes/
+doorstop_config.ini
+.doorstop_version
+
+# Optional local assets / old install payloads
+deps/
+TheOtherHats/
+/changelog.txt
+/Props.txt
+/*.dll
+/*.exe
+/*.pdb
+/*.deps.json
+*.exe
+
+# Build artifacts
+TheOtherRoles/bin/
+TheOtherRoles/obj/
