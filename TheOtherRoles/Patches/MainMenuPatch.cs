@@ -104,12 +104,11 @@ Thanks to miniduikboot & GD for hosting modded servers (and so much more)
 ";
                 creditsString += $@"<size=60%> <b>Other Credits & Resources:</b>
 OxygenFilter - For the versions v2.3.0 to v2.6.1, we were using the OxygenFilter for automatic deobfuscation
-Reactor - The framework used for all versions before v2.0.0, and again since 4.2.0
 BepInEx - Used to hook game functions
 Essentials - Custom game options by DorCoMaNdO:
 Before v1.6: We used the default Essentials release
 v1.6-v1.8: We slightly changed the default Essentials.
-v2.0.0 and later: As we were not using Reactor anymore, we are using our own implementation, inspired by the one from DorCoMaNdO
+v2.0.0 and later: We are using our own implementation, inspired by the one from DorCoMaNdO
 Jackal and Sidekick - Original idea for the Jackal and Sidekick came from Dhalucard
 Among-Us-Love-Couple-Mod - Idea for the Lovers modifier comes from Woodi-dev
 Jester - Idea for the Jester role came from Maartii

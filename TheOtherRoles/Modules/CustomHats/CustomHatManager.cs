@@ -34,18 +34,14 @@ public static class CustomHatManager
     internal static readonly Dictionary<string, HatViewData> ViewDataCache = new();
     internal static readonly Dictionary<string, HatExtension> ExtensionCache = new();
     
-    private static readonly HatsLoader Loader;
-    
     internal static HatExtension TestExtension { get; private set; }
 
     static CustomHatManager()
     {
-        Loader = TheOtherRolesPlugin.Instance.AddComponent<HatsLoader>();
     }
     
     internal static void LoadHats()
     {
-        Loader.FetchHats();
     }
     
     internal static bool TryGetCached(this HatParent hatParent, out HatViewData asset)

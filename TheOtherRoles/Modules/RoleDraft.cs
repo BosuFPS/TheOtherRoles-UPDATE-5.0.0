@@ -9,7 +9,7 @@ using System.Collections;
 using TheOtherRoles.Patches;
 using static TheOtherRoles.TheOtherRoles;
 using UnityEngine.UI;
-using Reactor.Utilities.Extensions;
+using TheOtherRoles.Utilities;
 
 namespace TheOtherRoles.Modules
 {

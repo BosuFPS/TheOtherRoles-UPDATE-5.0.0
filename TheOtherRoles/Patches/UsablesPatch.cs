@@ -11,7 +11,6 @@ using System.Collections.Generic;
 using TheOtherRoles.Utilities;
 using TheOtherRoles.Objects;
 using TheOtherRoles.CustomGameModes;
-using Reactor.Utilities.Extensions;
 using AmongUs.GameOptions;
 
 namespace TheOtherRoles.Patches {

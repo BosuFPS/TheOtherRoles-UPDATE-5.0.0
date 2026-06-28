@@ -11,7 +11,6 @@ using System.Text;
 using TheOtherRoles.Utilities;
 using static TheOtherRoles.TheOtherRoles;
 using static TheOtherRoles.CustomOption;
-using Reactor.Utilities.Extensions;
 using AmongUs.GameOptions;
 using BepInEx.Unity.IL2CPP;
 using BepInEx;

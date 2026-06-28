@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using System.Linq;
-using Reactor.Utilities.Extensions;
+using TheOtherRoles.Utilities;
 
 namespace TheOtherRoles
 {

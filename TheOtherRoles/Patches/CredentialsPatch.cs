@@ -165,14 +165,8 @@ $@"<size=60%> <color=#FCCE03FF>Special thanks to Smeggy</color></size>";
                 }
             }
 
-            public static async Task loadMOTDs() {
-                HttpClient client = new HttpClient();
-                HttpResponseMessage response = await client.GetAsync("https://raw.githubusercontent.com/TheOtherRolesAU/MOTD/main/motd.txt");
-                response.EnsureSuccessStatusCode();
-                string motds = await response.Content.ReadAsStringAsync();
-                foreach(string line in motds.Split("\n", StringSplitOptions.RemoveEmptyEntries)) {
-                        MOTD.motds.Add(line);
-                }
+            public static Task loadMOTDs() {
+                return Task.CompletedTask;
             }
         }        
     }

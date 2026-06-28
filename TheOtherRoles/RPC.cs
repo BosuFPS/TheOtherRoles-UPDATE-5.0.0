@@ -16,7 +16,6 @@ using TheOtherRoles.CustomGameModes;
 using AmongUs.Data;
 using AmongUs.GameOptions;
 using Assets.CoreScripts;
-using Reactor.Utilities.Extensions;
 using TheOtherRoles.Modules;
 namespace TheOtherRoles
 {

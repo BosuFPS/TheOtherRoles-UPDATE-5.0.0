@@ -2,14 +2,12 @@
 using AmongUs.GameOptions;
 using HarmonyLib;
 using Hazel;
-using Reactor.Utilities;
-using Reactor.Utilities.Extensions;
+using TheOtherRoles.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using TheOtherRoles.Patches;
-using TheOtherRoles.Utilities;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Video;

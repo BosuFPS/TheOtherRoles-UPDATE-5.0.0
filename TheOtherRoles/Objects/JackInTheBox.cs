@@ -4,7 +4,6 @@ using UnityEngine;
 using System.Linq;
 
 using TheOtherRoles.Utilities;
-using Reactor.Utilities.Extensions;
 
 namespace TheOtherRoles.Objects {
 

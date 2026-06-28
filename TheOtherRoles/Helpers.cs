@@ -12,7 +12,6 @@ using Hazel;
 using TheOtherRoles.Utilities;
 using System.Threading.Tasks;
 using TheOtherRoles.CustomGameModes;
-using Reactor.Utilities.Extensions;
 using AmongUs.GameOptions;
 using TheOtherRoles.Patches;
 

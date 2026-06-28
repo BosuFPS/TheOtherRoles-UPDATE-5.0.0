@@ -8,7 +8,6 @@ using System;
 
 using TheOtherRoles.Utilities;
 using System.Linq;
-using Reactor.Utilities.Extensions;
 
 namespace TheOtherRoles.Patches {
     public class GameStartManagerPatch  {

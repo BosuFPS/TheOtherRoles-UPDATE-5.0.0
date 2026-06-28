@@ -10,7 +10,6 @@ using TheOtherRoles.CustomGameModes;
 using static TheOtherRoles.TheOtherRoles;
 using AmongUs.Data;
 using Hazel;
-using Reactor.Utilities.Extensions;
 
 namespace TheOtherRoles
 {

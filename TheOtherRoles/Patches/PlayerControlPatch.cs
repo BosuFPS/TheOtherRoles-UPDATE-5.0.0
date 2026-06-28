@@ -14,7 +14,6 @@ using static UnityEngine.GraphicsBuffer;
 using AmongUs.GameOptions;
 using Assets.CoreScripts;
 using Sentry.Internal.Extensions;
-using Reactor.Utilities.Extensions;
 
 namespace TheOtherRoles.Patches {
     [HarmonyPatch(typeof(PlayerControl), nameof(PlayerControl.FixedUpdate))]

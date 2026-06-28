@@ -17,18 +17,13 @@ using TheOtherRoles.Modules;
 using TheOtherRoles.Utilities;
 using Il2CppSystem.Security.Cryptography;
 using Il2CppSystem.Text;
-using Reactor.Networking.Attributes;
 using AmongUs.Data;
-using TheOtherRoles.Modules.CustomHats;
-using static TheOtherRoles.Modules.ModUpdater;
 
 namespace TheOtherRoles
 {
     [BepInPlugin(Id, "The Other Roles", VersionString)]
     [BepInDependency(SubmergedCompatibility.SUBMERGED_GUID, BepInDependency.DependencyFlags.SoftDependency)]
     [BepInProcess("Among Us.exe")]
-    [ReactorModFlags(Reactor.Networking.ModFlags.RequireOnAllClients)]
-    
     public class TheOtherRolesPlugin : BasePlugin
     {
         public const string Id = "me.eisbison.theotherroles";
@@ -95,7 +90,6 @@ namespace TheOtherRoles
             Instance = this;
   
             _ = Helpers.checkBeta(); // Exit if running an expired beta
-            _ = Patches.CredentialsPatch.MOTD.loadMOTDs();
 
             DebugMode = Config.Bind("Custom", "Enable Debug Mode", "false");
             GhostsSeeInformation = Config.Bind("Custom", "Ghosts See Remaining Tasks", true);
@@ -117,27 +111,20 @@ namespace TheOtherRoles
             ServerManager.DefaultRegions = new Il2CppReferenceArray<IRegionInfo>(new IRegionInfo[0]);
             UpdateRegions();
 
-            // Reactor Credits (future use?)
-            // Reactor.Utilities.ReactorCredits.Register("TheOtherRoles", VersionString, betaDays > 0, location => location == Reactor.Utilities.ReactorCredits.Location.PingTracker);
-
             DebugMode = Config.Bind("Custom", "Enable Debug Mode", "false");
             Harmony.PatchAll();
             
             CustomOptionHolder.Load();
             CustomColors.Load();
-            CustomHatManager.LoadHats();
             if (BepInExUpdater.UpdateRequired)
             {
                 AddComponent<BepInExUpdater>();
                 return;
             }
 
-            AddComponent<ModUpdater>();
-
             EventUtility.Load();
             SubmergedCompatibility.Initialize();
             MainMenuPatch.addSceneChangeCallbacks();
-            _ = RoleInfo.loadReadme();
             AddToKillDistanceSetting.addKillDistance();
             TheOtherRolesPlugin.Logger.LogInfo("Loading TOR completed!");
         }

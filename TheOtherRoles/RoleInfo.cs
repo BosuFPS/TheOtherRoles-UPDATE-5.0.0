@@ -7,7 +7,6 @@ using UnityEngine;
 using TheOtherRoles.Utilities;
 using TheOtherRoles.CustomGameModes;
 using System.Threading.Tasks;
-using System.Net.Http;
 
 namespace TheOtherRoles
 {
@@ -361,24 +360,12 @@ namespace TheOtherRoles
         }
 
 
-        static string ReadmePage = "";
-        public static async Task loadReadme() {
-            if (ReadmePage == "") {
-                HttpClient client = new HttpClient();
-                HttpResponseMessage response = await client.GetAsync("https://raw.githubusercontent.com/TheOtherRolesAU/TheOtherRoles/main/README.md");
-                response.EnsureSuccessStatusCode();
-                string httpres = await response.Content.ReadAsStringAsync();
-                ReadmePage = httpres;
-            }
+        public static Task loadReadme() {
+            return Task.CompletedTask;
         }
-        public static string GetRoleDescription(RoleInfo roleInfo) {
-            while (ReadmePage == "") {
-            }
-                
-            int index = ReadmePage.IndexOf($"## {roleInfo.name}");
-            int endindex = ReadmePage.Substring(index).IndexOf("### Game Options");
-            return ReadmePage.Substring(index, endindex);
 
+        public static string GetRoleDescription(RoleInfo roleInfo) {
+            return $"{roleInfo.name}: {roleInfo.shortDescription}";
         }
     }
 }

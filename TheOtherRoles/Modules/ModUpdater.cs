@@ -37,16 +37,11 @@ namespace TheOtherRoles.Modules {
         }
 
         private void Start() {
-            if (_busy) return;
-            this.StartCoroutine(CoCheckForUpdate());
-            SceneManager.add_sceneLoaded((System.Action<Scene, LoadSceneMode>)(OnSceneLoaded));
         }
         
             
         [HideFromIl2Cpp]
         public void StartDownloadRelease(GithubRelease release) {
-            if (_busy) return;
-            this.StartCoroutine(CoDownloadRelease(release));
         }
 
         [HideFromIl2Cpp]
