@@ -50,11 +50,74 @@ The [Role Assignment](#role-assignment) section explains how the roles are being
 
 This repository includes the mod plugin and BepInEx runtime files needed to load it. It does not include Among Us game files.
 
+Original TheOtherRoles repository: https://github.com/TheOtherRolesAU/TheOtherRoles
+
 1. Install Among Us on Steam.
 2. Download this repository as ZIP or clone it.
 3. Copy `.doorstop_version`, `BepInEx/`, `dotnet/`, `doorstop_config.ini`, `winhttp.dll`, and `steam_appid.txt` into your Among Us game folder, next to `Among Us.exe`.
 4. Start `Among Us.exe` once. The first start can take a few minutes while BepInEx generates IL2CPP interop files.
 5. If it loaded correctly, `BepInEx/LogOutput.log` contains `Loading [The Other Roles 5.0.0]` and `Loading TOR completed!`.
+
+## Deutsche Anleitung
+
+Für TheOtherRoles braucht ihr eine frühere Version von Among Us. Among Us ist am Handy nicht mit Mods spielbar.
+
+### Steam
+
+1. Drückt `Windows-Taste + R`.
+2. Gebt Folgendes ein und drückt Enter:
+
+```text
+steam://open/console
+```
+
+3. Kopiert in die Steam-Konsole Folgendes hinein und drückt Enter:
+
+```text
+download_depot 945360 945361 5207443046106116882
+```
+
+4. Wartet, bis der Download abgeschlossen ist.
+5. Danach erscheint ein Text mit einem Dateipfad, zum Beispiel `Depot Download complete: "C:\Program Files\..."`. Kopiert euren eigenen Dateipfad.
+6. Drückt erneut `Windows-Taste + R`, fügt den Dateipfad ein und drückt Enter.
+
+Video-Anleitung: https://youtu.be/W3nsYq47bG0?si=nU9j51Io5JOnzxPk
+
+### Epic Games
+
+1. Drückt `Windows-Taste + S`.
+2. Sucht nach `PowerShell`.
+3. Gebt Folgendes ein:
+
+```powershell
+iwr https://github.com/whichtwix/EpicGamesDowngrader/releases/download/2024.11.26/DowngradeEpic.ps1 -UseBasicParsing | iex
+```
+
+### Wie installiere ich die TheOtherRoles Mod?
+
+1. Ladet die aktuelle Version `v5.0.0` hier herunter: https://github.com/BosuFPS/TheOtherRoles-UPDATE-5.0.0/releases/tag/v5.0.0
+2. Extrahiert den TheOtherRoles-Ordner.
+3. Kopiert alle Elemente aus dem extrahierten Ordner.
+4. Fügt sie in den Among-Us-Ordner von zuvor ein.
+5. Startet `Among Us.exe`.
+6. Im Spiel sollte nun die installierte Version der TheOtherRoles Mod angezeigt werden.
+
+### Blackscreen
+
+Wenn Among Us nur einen Blackscreen zeigt, liegt das meistens daran, dass vorher das ungemoddete neue Among Us gestartet wurde.
+
+1. Drückt `Windows-Taste + R`.
+2. Gebt Folgendes ein und drückt Enter:
+
+```text
+%appdata%
+```
+
+3. Klickt einmal zurück in den Ordner `AppData`.
+4. Öffnet `LocalLow`.
+5. Öffnet `Innersloth`.
+6. Öffnet `AmongUs`.
+7. Löscht dort `settings.amongus`.
 
 # Releases
 | Among Us - Version| Mod Version | Link |
